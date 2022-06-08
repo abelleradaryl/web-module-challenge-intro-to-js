@@ -20,6 +20,8 @@ Do the following:
    HINT: no function required
 */
 
+let votingAge = 21 
+  console.log(votingAge >= 18);
 
 
 /*
@@ -33,8 +35,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
+let firstThing = 1
+let secondThing = 2
+if  (firstThing < secondThing) {
+  firstThing = firstThing + 1;
+  console.log(firstThing);
+}
 
 
 
@@ -48,6 +54,9 @@ Do the following:
 
    HINT: look up the Number method
 */
+let year = "1999"
+let number = Number("1999");
+  console.log(number);
 
 
 
@@ -61,9 +70,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b) {
+  return a * b 
 }
+console.log(multiply(2,15))
 
 
 
@@ -77,10 +87,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
-
+console.log(dogYears(12))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -173,8 +183,8 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+ return km * .621371;
 }
 
 
@@ -187,8 +197,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48;
 }
 
 
@@ -206,10 +216,15 @@ Using the annoyingSong function below do the following:
 3. Outside of the function, Make a loop that invokes annoying song with a number that decreases until it gets to 1 bottle left. 
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
+function annoyingSong(num){
+ return num + " bottles of soda on the wall, " + num + " bottles of soda, take one down pass it around " + (num - 1) +" bottles of soda on the wall"
+};
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
-}
+for (let i = 0; i >= 0; i--) {
+  console.log(annoyingSong(i));
+  i--;
+};
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -227,8 +242,18 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score) {
+if (score >= 90) {
+return 'you got an A';
+}else if (score >= 80) {
+return 'you got a B';
+} else if (score >= 70) {
+return 'you got a C';
+} else if (score >= 60){
+return 'you got a D';
+} else {
+return 'you got an F';
+}
 }
 
 
