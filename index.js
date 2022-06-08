@@ -139,9 +139,28 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
-}
+function hungryDog(weight, age){
+  if (age >= 1) {
+    if (weight <= 5) {
+      return weight * .05;
+    } else if(weight <= 10) {
+      return weight * .04;
+    } else if(weight <= 15) {
+      return weight * .03;
+    } else {
+      return weight * .02;
+    }
+  }
+  if(age < 1) {
+    if(age <= .333) {
+      return weight * .100;
+    } else if(age <= .583) {
+      return weight * .050;
+    } else {
+      return weight * .040;
+    }
+    }
+  };
 
 
 
@@ -166,9 +185,31 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
+function ranNum(min, max) {
+  number = Math.random() * (max - min) + min;
+  if(number === 1) {
+    return 'rock';
+  } else if(number === 2) {
+    return 'paper';
+  } else {
+    return 'scissors';
+  };
+};
+
+let computer = '';
+computer = ranNum(1, 3);
+
 function game(user, computer){
-  /*add your code here*/
-}
+  if(user === computer) {
+    return "it's a tie";
+  } else if(user === 'rock' && computer === 'paper' || user === 'paper' && computer === 'scissors' || user === 'scissors' && computer === 'rock') {
+    return 'you lose!';
+  } else if(user === 'rock' && computer === 'scissors' || user === 'paper' && computer === 'rock' || user === 'scissors' && computer === 'paper') {
+    return 'you win!';
+  } else {
+    return 'Choose rock, paper, or scissors.';
+  }
+};
 
 
 
